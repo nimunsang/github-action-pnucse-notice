@@ -14,7 +14,7 @@ def parsing_beautifulsoup(url):
 
 def is_file_exists(file_name):
   try:
-    f = open(file_name, 'r', encoding='utf-8')
+    f = open(file_name, 'rt', encoding='utf-8')
     f.close()
   except FileNotFoundError:
     return False
@@ -27,7 +27,7 @@ def make_file(file_name):
 
 
 def get_id_list(file_name):
-  with open(file_name, 'r', encoding='utf-8') as f:
+  with open(file_name, 'rt', encoding='utf-8') as f:
     id_list = [notice_id.strip() for notice_id in f.readlines()]
   return id_list
 
