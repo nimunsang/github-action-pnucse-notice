@@ -99,7 +99,7 @@ def send_email(new_notices, my_email):
 
 if __name__ == "__main__":
   EMAIL_PASSWORD = os.environ['EMAIL_PASSWORD']
-  file_name = 'notice_ids.txt'
+  file_name = 'test.txt'
   if not is_file_exists(file_name):
     make_file(file_name)
 
