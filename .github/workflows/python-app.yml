@@ -21,5 +21,12 @@ jobs:
       env:
         EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
       run: |
-        python main.py
+        python main.py  
+    - name: Commit changes
+      run: |
+        git add .
+        git commit -m "gg" # 커밋 메시지
+    - name: Push changes
+      run: |
+        git push origin master
 
