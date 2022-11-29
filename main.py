@@ -14,7 +14,7 @@ def parsing_beautifulsoup(url):
 
 def is_file_exists(file_name):
   try:
-    f = open(file_name, 'r', encoding='cp949')
+    f = open(file_name, 'r', encoding='UTF8')
     f.close()
   except FileNotFoundError:
     return False
@@ -22,12 +22,12 @@ def is_file_exists(file_name):
 
 
 def make_file(file_name):
-  f = open(file_name, 'w', encoding='cp949')
+  f = open(file_name, 'w', encoding='UTF8')
   f.close()
 
 
 def get_id_list(file_name):
-  with open(file_name, 'r', encoding='cp949') as f:
+  with open(file_name, 'r', encoding='UTF8') as f:
     id_list = [notice_id.strip() for notice_id in f.readlines()]
   return id_list
 
@@ -65,7 +65,7 @@ def get_new_pnucse_notice(notice_list_in_file):
 
 
 def append_id_to_file(file_name, new_notices):
-  with open(file_name, 'a', encoding='cp949') as f:
+  with open(file_name, 'a', encoding='UTF8') as f:
     for new_notice in new_notices:
       f.write(new_notice[0])
       f.write('\n')
