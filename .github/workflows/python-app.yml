@@ -24,6 +24,8 @@ jobs:
         python main.py  
     - name: Commit changes
       run: |
+        git config --global user.email "sk980919@naver.com"
+        git config --global user.name "nimunsang"
         git add .
         git commit -m "gg" # 커밋 메시지
     - name: Push changes
